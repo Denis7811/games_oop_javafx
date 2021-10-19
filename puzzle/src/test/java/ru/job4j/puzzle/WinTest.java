@@ -7,7 +7,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-
 public class WinTest {
     @Test
     public void whenVerticalWin() {
