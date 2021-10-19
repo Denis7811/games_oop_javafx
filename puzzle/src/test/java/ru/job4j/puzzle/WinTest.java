@@ -5,8 +5,9 @@ import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-@Ignore
+
 public class WinTest {
     @Test
     public void whenVerticalWin() {
@@ -52,6 +53,30 @@ public class WinTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 1, 0},
                 {1, 1, 1, 1, 0},
+        };
+        assertThat(Win.check(board), is(false));
+    }
+
+    @Test
+    public void whenAllNull() {
+        int[][] board = {
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0},
+        };
+        assertThat(Win.check(board), is(false));
+    }
+
+    @Test
+    public void whenAllOne() {
+        int[][] board = {
+                {1, 1, 0, 0, 0},
+                {1, 1, 0, 0, 0},
+                {1, 1, 1, 1, 1},
+                {1, 1, 0, 0, 0},
+                {1, 1, 1, 1, 1},
         };
         assertThat(Win.check(board), is(false));
     }
