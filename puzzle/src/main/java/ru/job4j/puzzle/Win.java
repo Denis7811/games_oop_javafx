@@ -30,9 +30,9 @@ public class Win {
                 if (monoVertical(board, i) || monoHorizontal(board, i)) {
                     rsl = true;
                     break;
-                    }
                 }
             }
+        }
         return rsl;
     }
 }
