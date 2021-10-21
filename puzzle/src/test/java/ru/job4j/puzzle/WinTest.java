@@ -70,11 +70,11 @@ public class WinTest {
     @Test
     public void whenAllOne() {
         int[][] board = {
-                {1, 1, 0, 0, 0},
-                {1, 1, 0, 0, 0},
+                {1, 1, 1, 0, 1},
                 {1, 1, 1, 1, 1},
-                {1, 1, 0, 0, 0},
-                {1, 1, 1, 1, 1},
+                {1, 1, 1, 0, 1},
+                {1, 1, 0, 1, 1},
+                {0, 0, 1, 1, 1},
         };
         assertThat(Win.check(board), is(true));
     }
